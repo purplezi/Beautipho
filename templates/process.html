@@ -8,21 +8,227 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width,initial-scale=1">
 
-        <title>Start your beautifying</title>
+        <title>Beautifying</title>
         <meta name="description" content="">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
         <!-- The compiled CSS file -->
         <link rel="stylesheet" href="../static/css/production.css">
-        <!--<link rel="stylesheet" href="../static/css/style.css">-->
 
         <!-- Web fonts -->
         <link href="https://fonts.googleapis.com/css?family=Cabin:400,700|Playfair+Display:900" rel="stylesheet">
 
         <!-- favicon.ico. Place these in the root directory. -->
         <link rel="shortcut icon" href="favicon.ico">
-
-		<script src="../static/js/html5shiv.js"></script>
-      	<script src="../static/js/respond.min.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="../static/css/bootstrap-grid.min.css" /><!--CSS RESET-->
+		 <!-- 收藏用logo图标 -->
+		<link rel="bookmark"  type="image/x-icon"  href="../static/demo/favicon.ico"/>
+		 <!-- 网站显示页logo图标 -->
+		<link rel="shortcut icon" href="../static/demo/favicon.ico">
+		<style type="text/css">
+		.demo{padding: 2em 0;}
+		.box{
+		    text-align: center;
+		    overflow: hidden;
+		    position: relative;
+		}
+		.box:before{
+		    content: "";
+		    width: 150%;
+		    height: 150%;
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    background: radial-gradient(rgba(255,255,255,0.1) 15%, transparent 15%) 0 0,
+		                radial-gradient(rgba(255,255,255,0.1) 15%, transparent 15%) 16px 16px,
+		                radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+		                radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 16px 17px;
+		    background-size: 32px 32px;
+		    background-color: rgba(0,0,0,0.5);
+		    opacity: 0;
+		    z-index: 1;
+		    transform: translate(-50%, -50%) scale(0);
+		    transition: all 0.56s ease 0s;
+		}
+		.box:hover:before{
+		    opacity: 1;
+		    transform: translate(-50%, -50%) scale(1);
+		}
+		.box img{
+		    width: 100%;
+		    height: 100px;
+		    transition: all 0.3s ease 0s;
+		}
+		.box:hover img{ transform: scale(1.3); }
+		.box .box-content{
+		    width: 100%;
+		    position: absolute;
+		    bottom: 5px;
+		    left: 0;
+		    z-index: 1;
+		    transition: all 0.3s ease 0s;
+		}
+		.box .title{
+		    font-size: 22px;
+		    font-weight: 600;
+		    color: #47ddc8;
+		    text-transform: uppercase;
+		    text-shadow: 0 0 2px #000;
+		    opacity: 0;
+		    margin: 0 0 5px 0;
+		    position: relative;
+		    transform: translateY(100%);
+		    transition: all 0.5s ease 0s;
+		}
+		.box:hover .title{
+		    opacity: 1;
+		    transform: translateY(0);
+		}
+		.box .post{
+		    display: block;
+		    font-size: 14px;
+		    font-style: italic;
+		    color: #fff;
+		    letter-spacing: 1px;
+		    text-transform: uppercase;
+		    margin-bottom: 5px;
+		    transform: translateX(-100%) rotateX(90deg);
+		    transition: all 0.5s ease 0s;
+		}
+		.box:hover .post{ transform: translateY(0) rotate(0); }
+		.box .icon{
+		    padding: 0;
+		    margin: 0;
+		    list-style: none;
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    z-index: 1;
+		    transform: translate(-50%, -50%);
+		    transition: all 0.3s ease 0s;
+		}
+		.box .icon li{
+		    display: inline-block;
+		    margin: 0 7px;
+		    transform: rotateX(90deg);
+		    transition: all 0.3s ease 0s;
+		}
+		.box .icon li:last-child{ transition-delay: 0.2s; }
+		.box:hover .icon li{ transform: rotateX(0); }
+		.box .icon li a{
+		    display: block;
+		    width: 35px;
+		    height: 25px;
+		    line-height: 35px;
+		    border-radius: 5px;
+		    background: #fff;
+		    font-size: 17px;
+		    color: #505050;
+		    transition: all 0.3s ease 0s;
+		}
+		.box .icon li a:hover{
+		    background: #47ddc8;
+		    box-shadow: 0 0 10px #000;
+		    color: #fff;
+		}
+		@media only screen and (max-width:990px){
+		    .box{ margin-bottom: 30px; }
+		}
+	</style>
+   	
+   		<!-- Edit Below -->
+<!--		<script type="text/javascript" src="js/jquery.min.js"></script>-->
+    	<script type="text/javascript" src="../static/css/animate.min.css"></script>
+    	<link href='../static/css/animate.min.css' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+		
+		<style type="text/css">
+	      body, html {
+	          height: 100%;
+	          margin: 0;
+	          -webkit-font-smoothing: antialiased;
+	          font-weight: 100;
+	          background: #FCE2E2;
+	          text-align: center;
+	          font-family: helvetica;
+	      }
+	      
+	      .tabs input[type=radio] {
+	          position: absolute;
+	          top: -9999px;
+	          left: -9999px;
+	      }
+	      .tabs {
+	        width: 560px;
+			height: inherit;
+	        float: none;
+	        list-style: none;
+	        position: relative;
+	        padding: 0;
+	        margin: -30px auto;
+	      }
+	      .tabs li{
+	        float: left;
+	      }
+	      .tabs label {
+	          display: block;
+	          padding: 10px 10px;
+	          border-radius: 2px 2px 0 0;
+	          color: #9A3E48;
+	          font-size: 24px;
+	          font-weight: normal;
+	          font-family: 'Roboto', helveti;
+	          background: rgba(255,255,255,0.2);
+	          cursor: pointer;
+	          position: relative;
+	          top: 0px;
+	          -webkit-transition: all 0.2s ease-in-out;
+	          -moz-transition: all 0.2s ease-in-out;
+	          -o-transition: all 0.2s ease-in-out;
+	          transition: all 0.2s ease-in-out;
+	      }
+	      .tabs label:hover {
+	        background: rgba(255,255,255,0.5);
+	        top: 0;
+	      }
+	      
+	      [id^=tab]:checked + label {
+	        background: #cd5360;
+	        color: white;
+	        top: 0;
+	      }
+	      
+	      [id^=tab]:checked ~ [id^=tab-content], [id^=tab]:checked ~ [id^=tab-content] > div {
+	          display: block;
+	      }
+	      .tab-content{
+	        z-index: 2;
+	        display: none;
+	        text-align: left;
+	        overflow: hidden;
+	        width: 100%;
+			height: inherit;
+	        font-size: 20px;
+	        line-height: 140%;
+	        padding-top: 10px;
+	        background: #9A3E48;
+	        padding: 15px;
+	        color: white;
+	        position: absolute;
+	        top: 53px;
+	        left: 0;
+	        box-sizing: border-box;
+	      }
+	      .tab-content > div{
+	        display: none;
+	        -webkit-animation-duration: 1s;
+	        -o-animation-duration: 1s;
+	        -moz-animation-duration: 1s;
+	        animation-duration: 1s;
+	      }
+	    </style>
     </head>
 
     <body>
@@ -33,61 +239,417 @@
                 <!-- Header -->
         <header class="header full-width" style="background:rgba(0,0,0,1)">
 
-        </header>
+            <!-- Mobile header -->
+            <div class="show-on-mobile pt1 pl2 pr2 mb1">
+                <div class="border--bottom pt1">
+                    <div class="grid-row grid-row--center pb1">
+                        <div class="grid-column span-half">
+                            <!-- Mobile logo -->
+                            <div class="mb0"><img class="logo--mobile" src="../static/img/logo.png" alt="Beautipho" title="Beautipho"></div>
+                        </div>
+                        <div class="grid-column span-half align--right">
+                            <!-- Mobile social links -->
+                            <ul class="mobile-social-links list--inline">
+                                <li class="mr1"><a class="link link--default" href="https://www.facebook.com/DonaldTrump/"><img class="icon" src="../static/img/facebook.svg" alt="Facebook"></a></li>
+                                <li class="mr1"><a class="link link--default" href="https://www.instagram.com/realdonaldtrump/?hl=zh-cn"><img class="icon" src="../static/img/instagram.svg" alt="Instagram"></a></li>
+                                <li><a class="link link--default" href="https://twitter.com/realdonaldtrump"><img class="icon" src="../static/img/twitter.svg" alt="Twitter"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Desktop header -->
+            <!-- Desktop logo -->
+            <h1 class="hide-on-mobile logo-container absolute block full-width align--center"><img class="logo--desktop" src="../static/img/logo.png" alt="Beautipho" title="Beautipho"></h1>
+            <!-- Social links -->
+            <ul class="pt1 no-bullets align--center hide-on-mobile">
+                <li><a class="link link--default" href="https://www.facebook.com/DonaldTrump/"><img class="icon" src="../static/img/facebook.svg" alt="Facebook"></a></li>
+                <li><a class="link link--default" href="https://www.instagram.com/realdonaldtrump/?hl=zh-cn"><img class="icon" src="../static/img/instagram.svg" alt="Instagram"></a></li>
+                <li><a class="link link--default" href="https://twitter.com/realdonaldtrump"><img class="icon" src="../static/img/twitter.svg" alt="Twitter"></a></li>
+            </ul>
+
+        </header>
+        
         <!-- Hero image -->
-        <div class="hero-container full-width show-on-mobile pt1 pl2 pr2">
-            <div class="hero full-width full-height" style="background:rgba(0,0,0,0) url(../static/upload/1.jpg) no-repeat scroll center center/cover"></div>
-        </div>
-        <div class="hide-on-mobile hero" style="background:rgba(0,0,0,0) url(../static/upload/1.jpg) no-repeat scroll center center/cover"></div>
+		<div class="hero-container full-width show-on-mobile pt1 pl2 pr2" style="background:rgba(0,0,0,1)">
+			<div class="hero full-width full-height">
+			<!-- <div class="hero full-width full-height" style="background:rgba(0,0,0,0) url(../static/upload/{{picturepath}}) no-repeat scroll center center/cover"> -->
+				<img class="full-width full-height" src="../static/upload/{{picturepath}}"> 
+			</div>
+			
+			<!-- <div class="btn-group"> -->
+				<!-- <button type="button" class="btn btn-lg btn-success btn-download" >download</button> -->
+				<!-- <button type="button" class="btn btn-lg btn-success btn-download" onclick="{{ url_for('save', filename=picturepath)}}">download</button> -->
+			  <!-- </div> -->
+
+			  <!-- <form id="Amboss-form" action="{{ url_for('save',filename=picturepath) }}" method="POST" enctype="multipart/form-data">
+				<button type="button" class="btn btn-lg btn-success btn-save" type="submit">save</button> -->
+		  <!--<input type="text" class="hidden" name="image" value="{{ rawimage_name }}">-->
+			<!-- </form> -->
+
+		</div>
+        <!-- <div class="hide-on-mobile hero" style="background:rgba(0,0,0,0) url(../static/upload/{{picturepath}}) no-repeat scroll center center/cover"></div> -->
+        <div class="hide-on-mobile hero">
+			<img class="full-width full-height" src="../static/upload/{{picturepath}}"> 
+		</div>
 
         <!-- Body -->
         <div class="body full-width pt1 pr2 pb2 pl2" style="background:rgba(0,0,0,1)">
-            <!-- Navigation -->
-            <nav class="navigation border--bottom pt1">
-                <ul class="no-bullets list--inline pb1 bold">
-                    <li class="small mr2"><a class="link link--text current" href="index.html">STYLE</a></li>
-                    <li class="small mr2"><a class="link link--text" href="destinations.html">HEAD</a></li>
-					<li class="small mr2"><a class="link link--text" data-section="head">HEAD</a></li>
-                    <li class="small mr2"><a class="link link--text" href="pricing.html">FACE</a></li>
-				</ul>
-                <div>
-                    <ul class="sub-menu-t">
-                        <li class="active"><a class="menu-link" data-section="home" data-nav-title="home"
-                            data-section-pos="0" data-section-posy="0">Home <i class="fa fa-fw fa-home"></i>
-                        </a></li>
-                        <li><a class="menu-link" data-section="contact" data-nav-title="contact" data-section-pos="-100"
-                            data-section-posy="0">Contact Us<i class="fa fa-fw fa-list"></i></a></li>
-                    </ul>
-                </div>
-            </nav>
             <!-- Page Content -->
             <main class="content pt2 pb2">
-				<section class="style-section">
-					<h2>STYLE</h2>
-					<p>Quid turpius quam sapientis vitam ex insipientium sermone pendere? Et non ex maxima parte de tota iudicabis? Videamus igitur sententias eorum, tum ad verba redeamus. Quae sequuntur igitur?</p>
-					<p>Ne tum quidem te respicies et cogitabis sibi quemque natum esse et suis voluptatibus? Et nunc quidem quod eam tuetur, ut de vite potissimum loquar, est id extrinsecus.</p>
-					<p>Videamus igitur sententias eorum?</p>
-				</section>
-                <section class="head-section">
-					<h2>HEAD</h2>
-					<p>Quid turpius quam sapientis vitam ex insipientium sermone pendere? Et non ex maxima parte de tota iudicabis? Videamus igitur sententias eorum, tum ad verba redeamus. Quae sequuntur igitur?</p>
-					<p>Ne tum quidem te respicies et cogitabis sibi quemque natum esse et suis voluptatibus? Et nunc quidem quod eam tuetur, ut de vite potissimum loquar, est id extrinsecus.</p>
-					<p>Videamus igitur sententias eorum?</p>
-				</section>
+              
+            <div class="row">
+			<div class="col-md-4 col-sm-6">
+				<ul class="tabs">
+						<li>
+						<input type="radio" checked name="tabs" id="tab1">
+						<label for="tab1">STYLE</label>
+						<div id="tab-content1" class="tab-content">
+							<div class="animated  flipInY ">
+							<div class="demo">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-4 col-sm-6">
+									<div class="box">
+										<img src="../static/upload/{{prowhite}}">
+										<!-- <img src="{{url_for('sendwhiteimg')}}"> -->
+										<div class="box-content">
+											<h3 class="title">WHITEN</h3>
+											<span class="post"><a href="{{url_for('white')}}">美白</a></span>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-4 col-sm-6">
+									<div class="box">
+										<img src="../static/upload/{{problur}}">										
+										<!-- <img src="{{url_for('sendblurimg')}}"> -->
+										<div class="box-content">
+											<h3 class="title">BLUR</h3>
+											<span class="post"><a href="{{url_for('blur')}}">磨皮</a></span>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-4 col-sm-6">
+									<div class="box">
+										<img src="../static/upload/{{procolor}}">
+										<!-- <img src="../static/img/2.jpg"> -->
+										<!-- <img src="{{url_for('sendcolorimg')}}"> -->
+										<div class="box-content">
+											<h3 class="title">saturation</h3>
+											<span class="post"><a href="{{url_for('saturation')}}">饱和度</a></span>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-4 col-sm-6 pt2">
+									<div class="box">
+										<img src="../static/upload/{{probri}}">
+										<!-- <img src="../static/img/2.jpg"> -->
+										<!-- <img src="{{url_for('sendbriimg')}}"> -->
+										<div class="box-content">
+											<h3 class="title">BRIGHTEN</h3>
+											<span class="post"><a href="{{url_for('brighten')}}">亮度</a></span>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-4 col-sm-6 pt2">
+									<div class="box">
+										<img src="../static/upload/{{prosharp}}">
+										<!-- <img src="../static/img/2.jpg"> -->
+										<!-- <img src="{{url_for('sendsharpimg')}}"> -->
+										<div class="box-content">
+											<h3 class="title">SHARPEN</h3>
+											<span class="post"><a href="{{url_for('sharpen')}}">锐化</a></span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="col-md-4 col-sm-6 pt2">
+									<div class="box">
+										<img src="../static/upload/{{procon}}">
+										<!-- <img src="../static/img/3.jpg"> -->
+										<!-- <img src="{{url_for('sendconimg')}}"> -->
+										<div class="box-content">
+											<h3 class="title">CONTRAST</h3>
+											<span class="post"><a href="{{url_for('contrast')}}">对比度</a></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+							</div>
+						</div>
+						</li>
+						<li>
+						<input type="radio" name="tabs" id="tab2">
+						<label for="tab2">FACE</label>
+						<div id="tab-content2" class="tab-content">
+							<div class="animated  flipInY ">
+							<div class="demo">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-4 col-sm-6">
+									<div class="box">
+										<img src="../static/hats/drawhat0.png">
+										<div class="box-content">
+											<h3 class="title"><a href="{{url_for('drawhat',filename='0')}}">DRAWHAT0</a></h3>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-4 col-sm-6">
+									<div class="box">
+										<img src="../static/hats/drawhat1.png">
+										<div class="box-content">
+											<h3 class="title"><a href="{{url_for('drawhat',filename='1')}}">DRAWHAT1</a></h3>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-4 col-sm-6">
+									<div class="box">
+										<img src="../static/hats/hat0.png">
+										<div class="box-content">
+											<h3 class="title"><a href="{{url_for('hat',filename='0')}}">HAT0</a></h3>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-4 col-sm-6 pt2">
+									<div class="box">
+										<img src="../static/hats/hat1.png">
+										<div class="box-content">
+											<h3 class="title"><a href="{{url_for('hat',filename='1')}}">HAT1</a></h3>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-4 col-sm-6 pt2">
+									<div class="box">
+										<img src="../static/hats/hat2.png">
+										<div class="box-content">
+											<h3 class="title"><a href="{{url_for('hat',filename='2')}}">HAT2</a></h3>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-4 col-sm-6 pt2">
+									<div class="box">
+										<img src="../static/hats/hat3.png">
+										<div class="box-content">
+											<h3 class="title"><a href="{{url_for('hat',filename='3')}}">HAT3</a></h3>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-4 col-sm-6 pt2">
+									<div class="box">
+										<img src="../static/hats/hat4.png">
+										<div class="box-content">
+											<h3 class="title"><a href="{{url_for('hat',filename='4')}}">HAT4</a></h3>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-4 col-sm-6 pt2">
+									<div class="box">
+										<img src="../static/hats/hat5.png">
+										<div class="box-content">
+											<h3 class="title"><a href="{{url_for('hat',filename='5')}}">HAT5</a></h3>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-4 col-sm-6 pt2">
+									<div class="box">
+										<img src="../static/hair/hair0.png">
+										<div class="box-content">
+											<h3 class="title"><a href="{{url_for('hair',filename='0')}}">HAIR0</a></h3>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-4 col-sm-6 pt2">
+									<div class="box">
+										<img src="../static/hair/hair1.png">
+										<div class="box-content">
+											<h3 class="title"><a href="{{url_for('hair',filename='1')}}">HAIR1</a></h3>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="col-md-4 col-sm-6 pt2">
+									<div class="box">
+										<img src="../static/eyes/glass0.png">
+										<div class="box-content">
+											<h3 class="title"><a href="{{url_for('glass',filename='0')}}">GLASS0</a></h3>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-4 col-sm-6 pt2">
+									<div class="box">
+										<img src="../static/eyes/glass1.png">
+										<div class="box-content">
+											<h3 class="title"><a href="{{url_for('glass',filename='1')}}">GLASS1</a></h3>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-4 col-sm-6 pt2">
+									<div class="box">
+										<img src="../static/moustache/m0.png">
+										<div class="box-content">
+											<h3 class="title"><a href="{{url_for('moustache',filename='0')}}">MOUSTACHE0</a></h3>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-4 col-sm-6 pt2">
+									<div class="box">
+										<img src="../static/moustache/m1.png">
+										<div class="box-content">
+											<h3 class="title"><a href="{{url_for('moustache',filename='1')}}">MOUSTACHE1</a></h3>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-4 col-sm-6 pt2">
+									<div class="box">
+										<img src="../static/moustache/m2.png">
+										<div class="box-content">
+											<h3 class="title"><a href="{{url_for('moustache',filename='2')}}">MOUSTACHE2</a></h3>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-4 col-sm-6 pt2">
+									<div class="box">
+										<img src="../static/moustache/m3.png">
+										<div class="box-content">
+											<h3 class="title"><a href="{{url_for('moustache',filename='4')}}">MOUSTACHE0</a></h3>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+							</div>
+						</div>
+						</li>
+						<li>
+						<input type="radio" name="tabs" id="tab3">
+						<label for="tab3">BORDER</label>
+						<div id="tab-content3" class="tab-content">
+							<div class="animated  flipInY ">
+							<div class="demo">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-4 col-sm-6">
+									<div class="box">
+										<!-- <img src="../static/img/1.jpg"> -->
+										<img src="../static/borders/border00.png">
+										<div class="box-content">
+											<h3 class="title"><a href="{{url_for('border',filename='0')}}">border0</a></h3>
+											<!-- <span class="post">WHITE</span> -->
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-4 col-sm-6">
+									<div class="box">
+										<!-- <img src="../static/img/2.jpg"> -->
+										<img src="../static/borders/border11.png">
+										<div class="box-content">
+											<h3 class="title"><a href="{{url_for('border',filename='1')}}">border1</a></h3>
+											<!-- <span class="post">磨皮</span> -->
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-4 col-sm-6">
+									<div class="box">
+										<!-- <img src="../static/img/2.jpg"> -->
+										<img src="../static/borders/border22.png"></a>
+										<div class="box-content">
+											<h3 class="title"><a href="{{url_for('border',filename='2')}}">border2</a></h3>
+											<!-- <span class="post">饱和度</span> -->
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-4 col-sm-6 pt2">
+									<div class="box">
+										<!-- <img src="../static/img/2.jpg"> -->
+										<img src="../static/borders/border33.png"></a>
+										<div class="box-content">
+											<h3 class="title"><a href="{{url_for('border',filename='3')}}">border3</a></h3>
+											<!-- <span class="post">饱和度</span> -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+							</div>
+						</div>
+						</li>
+					</ul>
+
+					<!-- <div id="tab-content3" class="tab-content">
+						<form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+							<input id="file-picker" type="file" name="file" class="hidden" onchange="this.form.submit()">
+							<label for="file-picker" class="btn btn-lg btn-success">Select file</label>
+						</form>
+					</div> -->
+				</div>
+			</div>
+			
+			<form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+				<input id="file-picker" type="file" name="file" class="hidden" onchange="this.form.submit()">
+				<label for="file-picker" class="btn btn-lg btn-success btn-selective">Select file</label>
+			</form>
+
+			<div class="btn-group">
+				<!-- <button type="button" class="btn btn-lg btn-success btn-download" >download</button> -->
+				<button type="button" class="btn btn-lg btn-success btn-download" onclick="window.open('{{ url_for('download', filename=picturepath)}}')">download</button>
+			  </div>
+
+			  <!-- <form action="{{ url_for('save',filename=picturepath) }}" method="POST" enctype="multipart/form-data">
+				<button type="button" class="btn btn-lg btn-success btn-save" type="submit">save</button>
+			  </form> -->
+
+			  <div class="btn-group">
+				<!-- <button type="button" class="btn btn-lg btn-success btn-download" >download</button> -->
+				<button type="button" class="btn btn-lg btn-success btn-save" onclick="window.open('{{ url_for('save', filename=picturepath)}}')">save</button>
+			  </div>
+
+			<!-- <form id="download-form" action="{{ url_for('download',filename=picturepath) }}" method="GET" enctype="multipart/form-data">
+				<input id="download-picker" type="file" name="file" class="hidden" onchange="this.form.submit()">
+				<label for="download-picker" class="btn btn-lg btn-success btn-download">download</label>
+			</form> -->
+
+			<div id="fa-chevron-right">
+				<h5><a href="{{url_for('index')}}" class="rHome" title="Return to Home">HOME</a></h5>
+			</div>
             </main>
                         <!-- Footer -->
             <footer class="border--top pt1 pb1">
-                <p class="text--gray small mb0">&copy; Copyright | Design by</p>
+                <p class="text--gray small mb0"> Copyright | Design by </p>
             </footer>
         </div><!-- end Body -->
 
     </div>
-	<!-- jquery -->
-    <script type="text/javascript" src="../static/js/jquery.js"></script>
-    <!-- bootstrap -->
-    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
 
-    </body>
+	</body>
+	
 </html>
 
